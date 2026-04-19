@@ -17,7 +17,7 @@ app.use('/api/feedback', require('./routes/feedback'));
 app.get('/', (req, res) => res.json({ message: 'Server running!' }));
 app.use((err, req, res, next) => res.status(500).json({ message: err.message }));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 8080;
 
 const seedData = async () => {
   const User = require('./models/User');
