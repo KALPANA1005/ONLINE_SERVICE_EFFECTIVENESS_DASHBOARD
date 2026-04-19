@@ -7,10 +7,7 @@ const connectDB = require('./config/db');
 dotenv.config();
 
 const app = express();
-app.use(cors({
-  origin: ['https://transcendent-beijinho-a7bf66.netlify.app', 'http://localhost:3000'],
-  credentials: true
-}));
+app.use(cors());
 app.use(express.json());
 
 app.use('/api/auth', require('./routes/auth'));
